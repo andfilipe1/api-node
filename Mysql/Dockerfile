@@ -26,7 +26,7 @@ RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
 VOLUME /var/lib/mysql
 
 ADD database_schema.sql /tmp/database_schema.sql
-RUN mysql -u <user> -p < db_backup.dump/tmp/database_schema.sql
+#RUN mysql -u root -p  db_backup.dump/tmp/database_schema.sql
 
 
 COPY docker-entrypoint.sh /entrypoint.sh
@@ -35,5 +35,3 @@ ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306 33060
 CMD ["mysqld"]
-
-

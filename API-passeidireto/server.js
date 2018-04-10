@@ -4,11 +4,11 @@ var mysql = require('mysql');
 
 var port = process.env.NODEJS_API_PORT;
 if (!port) {
-    port = 8888;
+    port = 3307;
 }
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: 'notes-api',
+	user: 'root',
 	password: 'notes-api'
 });
 

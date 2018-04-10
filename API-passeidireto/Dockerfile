@@ -109,6 +109,10 @@ ENV PORT=4000
 
 WORKDIR /usr/src/app
 
+ADD import.sh /tmp/import.sh
+ADD database_schema.sql /tmp/database_schema.sql
+RUN /tmp/import.sh
+
 #CMD [ “nodejs”, “hello.js” ]
 #ENTRYPOINT nodejs hello.js
 
