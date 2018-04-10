@@ -111,4 +111,5 @@ WORKDIR /usr/src/app
 
 #CMD [ “nodejs”, “hello.js” ]
 #ENTRYPOINT nodejs hello.js
-EXPOSE 4000
+
+EXPOSE 8080
